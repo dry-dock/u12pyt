@@ -1,5 +1,5 @@
 FROM drydock/u12:prod
 
-ADD . /tmp
+ADD . /u12pyt
 
-RUN /tmp/install.sh && rm -rf /tmp
+RUN /u12pyt/install.sh
