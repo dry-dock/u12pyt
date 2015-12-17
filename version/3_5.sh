@@ -1,5 +1,5 @@
 #!/bin/bash -e
-sudo apt-get install python3.5
+sudo apt-get install python3.5-dev python3.5
 
 wget https://bootstrap.pypa.io/get-pip.py
 python3.5 get-pip.py
