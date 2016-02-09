@@ -12,7 +12,7 @@ for version in "${versions[@]}"
     mkdir ~/test_$version
     echo "cd ~/test_$version"
     cd ~/test_$version
-    echo "virtual venv"
+    echo "virtualenv venv"
     virtualenv venv
     echo "virtualenv -p /usr/bin/$version" "venv"
     virtualenv -p /usr/bin/$version venv
