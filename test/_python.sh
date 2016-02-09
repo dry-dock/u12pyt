@@ -1,243 +1,38 @@
-echo "======================= virtualenv version =========================="
+echo "========================= virtualenv version ============================"
 echo "virtualenv --version"
 virtualenv --version
 printf "\n\n"
 
-echo "================ Setting up virtual environment ====================="
-echo "mkdir ~/python_test"
-mkdir ~/python_test
-echo "cd ~/python_test"
-cd ~/python_test
-echo "virtual venv"
-virtualenv venv
-echo "virtualenv -p /usr/bin/python2.6" "venv"
-virtualenv -p /usr/bin/python2.6 venv
-echo "source venv/bin/activate"
-source venv/bin/activate
-printf "\n\n"
+declare -a versions=('python2.6' 'python2.7' 'python3.2' 'python3.3' 'python3.4' 'python3.5' 'pypy' 'pypy3')
 
-echo "======================== Python version ============================"
-echo "python --version"
-python --version
-printf "\n\n"
+for version in "${versions[@]}"
+  do
+    echo "============ Setting up Virtual Environment for $version  ==========="
+    echo "mkdir ~/test_$version"
+    mkdir ~/test_$version
+    echo "cd ~/test_$version"
+    cd ~/test_$version
+    echo "virtual venv"
+    virtualenv venv
+    echo "virtualenv -p /usr/bin/$version" "venv"
+    virtualenv -p /usr/bin/$version venv
+    echo "source venv/bin/activate"
+    source venv/bin/activate
+    printf "\n\n"
 
-echo "=================== Deactivating virtualenv ========================"
-echo "deactivate"
-deactivate
-echo "cd ~"
-cd ~
-echo "rm -rf python_test"
-rm -rf python_test
-echo "rm -rf venv"
-rm -rf venv
-printf "\n\n"
+    echo "======================== Python version ============================="
+    echo "python --version"
+    python --version
+    printf "\n\n"
 
-
-echo "================ Setting up virtual environment ====================="
-echo "mkdir ~/python_test"
-mkdir ~/python_test
-echo "cd ~/python_test"
-cd ~/python_test
-echo "virtual venv"
-virtualenv venv
-echo "virtualenv -p /usr/bin/python2.7" "venv"
-virtualenv -p /usr/bin/python2.7 venv
-echo "source venv/bin/activate"
-source venv/bin/activate
-printf "\n\n"
-
-echo "======================== Python version ============================"
-echo "python --version"
-python --version
-printf "\n\n"
-
-echo "=================== Deactivating virtualenv ========================"
-echo "deactivate"
-deactivate
-echo "cd ~"
-cd ~
-echo "rm -rf python_test"
-rm -rf python_test
-echo "rm -rf venv"
-rm -rf venv
-printf "\n\n"
-
-
-echo "================ Setting up virtual environment ====================="
-echo "mkdir ~/python_test"
-mkdir ~/python_test
-echo "cd ~/python_test"
-cd ~/python_test
-echo "virtual venv"
-virtualenv venv
-echo "virtualenv -p /usr/bin/python3.2" "venv"
-virtualenv -p /usr/bin/python3.2 venv
-echo "source venv/bin/activate"
-source venv/bin/activate
-printf "\n\n"
-
-echo "======================== Python version ============================"
-echo "python --version"
-python --version
-printf "\n\n"
-
-echo "=================== Deactivating virtualenv ========================"
-echo "deactivate"
-deactivate
-echo "cd ~"
-cd ~
-echo "rm -rf python_test"
-rm -rf python_test
-echo "rm -rf venv"
-rm -rf venv
-printf "\n\n"
-
-
-echo "================ Setting up virtual environment ====================="
-echo "mkdir ~/python_test"
-mkdir ~/python_test
-echo "cd ~/python_test"
-cd ~/python_test
-echo "virtual venv"
-virtualenv venv
-echo "virtualenv -p /usr/bin/python3.3" "venv"
-virtualenv -p /usr/bin/python3.3 venv
-echo "source venv/bin/activate"
-source venv/bin/activate
-printf "\n\n"
-
-echo "======================== Python version ============================"
-echo "python --version"
-python --version
-printf "\n\n"
-
-echo "=================== Deactivating virtualenv ========================"
-echo "deactivate"
-deactivate
-echo "cd ~"
-cd ~
-echo "rm -rf python_test"
-rm -rf python_test
-echo "rm -rf venv"
-rm -rf venv
-printf "\n\n"
-
-
-echo "================ Setting up virtual environment ====================="
-echo "mkdir ~/python_test"
-mkdir ~/python_test
-echo "cd ~/python_test"
-cd ~/python_test
-echo "virtual venv"
-virtualenv venv
-echo "virtualenv -p /usr/bin/python3.4" "venv"
-virtualenv -p /usr/bin/python3.4 venv
-echo "source venv/bin/activate"
-source venv/bin/activate
-printf "\n\n"
-
-echo "======================== Python version ============================"
-echo "python --version"
-python --version
-printf "\n\n"
-
-echo "=================== Deactivating virtualenv ========================"
-echo "deactivate"
-deactivate
-echo "cd ~"
-cd ~
-echo "rm -rf python_test"
-rm -rf python_test
-echo "rm -rf venv"
-rm -rf venv
-printf "\n\n"
-
-
-echo "================ Setting up virtual environment ====================="
-echo "mkdir ~/python_test"
-mkdir ~/python_test
-echo "cd ~/python_test"
-cd ~/python_test
-echo "virtual venv"
-virtualenv venv
-echo "virtualenv -p /usr/bin/python3.5" "venv"
-virtualenv -p /usr/bin/python3.5 venv
-echo "source venv/bin/activate"
-source venv/bin/activate
-printf "\n\n"
-
-echo "======================== Python version ============================"
-echo "python --version"
-python --version
-printf "\n\n"
-
-echo "=================== Deactivating virtualenv ========================"
-echo "deactivate"
-deactivate
-echo "cd ~"
-cd ~
-echo "rm -rf python_test"
-rm -rf python_test
-echo "rm -rf venv"
-rm -rf venv
-printf "\n\n"
-
-
-echo "================ Setting up virtual environment ====================="
-echo "mkdir ~/python_test"
-mkdir ~/python_test
-echo "cd ~/python_test"
-cd ~/python_test
-echo "virtual venv"
-virtualenv venv
-echo "virtualenv -p /usr/bin/pypy" "venv"
-virtualenv -p /usr/bin/pypy venv
-echo "source venv/bin/activate"
-source venv/bin/activate
-printf "\n\n"
-
-echo "======================== Python version ============================"
-echo "python --version"
-python --version
-printf "\n\n"
-
-echo "=================== Deactivating virtualenv ========================"
-echo "deactivate"
-deactivate
-echo "cd ~"
-cd ~
-echo "rm -rf python_test"
-rm -rf python_test
-echo "rm -rf venv"
-rm -rf venv
-printf "\n\n"
-
-
-echo "================ Setting up virtual environment ====================="
-echo "mkdir ~/python_test"
-mkdir ~/python_test
-echo "cd ~/python_test"
-cd ~/python_test
-echo "virtual venv"
-virtualenv venv
-echo "virtualenv -p /usr/bin/pypy3" "venv"
-virtualenv -p /usr/bin/pypy3 venv
-echo "source venv/bin/activate"
-source venv/bin/activate
-printf "\n\n"
-
-echo "======================== Python version ============================"
-echo "python --version"
-python --version
-printf "\n\n"
-
-echo "=================== Deactivating virtualenv ========================"
-echo "deactivate"
-deactivate
-echo "cd ~"
-cd ~
-echo "rm -rf python_test"
-rm -rf python_test
-echo "rm -rf venv"
-rm -rf venv
-printf "\n\n"
+    echo "==================== Deactivating virtualenv ========================"
+    echo "deactivate"
+    deactivate
+    echo "cd ~"
+    cd ~
+    echo "rm -rf test_$version"
+    rm -rf test_$version
+    echo "rm -rf venv"
+    rm -rf venv
+    printf "\n\n"
+  done
